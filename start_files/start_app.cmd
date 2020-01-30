@@ -1,0 +1,1 @@
+ng serve --watch --open --port 4200
