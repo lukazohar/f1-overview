@@ -1,4 +1,4 @@
-export interface Season {
+export interface ISeason {
   id: string;
   description: string;
   scheduled: Date;

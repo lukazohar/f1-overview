@@ -1,4 +1,4 @@
-import { Season } from './season';
-import { SportsRadarResponse } from './sportsRadarResponse';
+import { ISeason } from './season';
+import { ISportsRadarResponse } from './sportsRadarResponse';
 
-export { Season, SportsRadarResponse };
+export { ISeason, ISportsRadarResponse };
