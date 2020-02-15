@@ -1,0 +1,3 @@
+F1-seasons: https://api.sportradar.us/formula1/trial/v2/en/seasons.json?api_key=j6ggsntybujdxp8pejkxdbmk
+F1-season: https://api.sportradar.us/formula1/trial/v2/en/sport_events/sr:stage:426678/probabilities.json?api_key=j6ggsntybujdxp8pejkxdbmk
+F1-competitor: https://api.sportradar.us/formula1/trial/v2/en/competitors/sr:competitor:881457/profile.json?api_key=j6ggsntybujdxp8pejkxdbmk
