@@ -1,1 +1,13 @@
-<p>seasons works!</p>
+<div class="row">
+  <div *ngFor="let season of seasons" class="col-12 m-2">
+    <div class="card">
+      <img class="card-img-top" src="..." alt="Card image cap" />
+      <div class="card-body">
+        <h2 class="card-title">{{ season.description }}</h2>
+        <p class="card-text"><b>Start: </b> {{ season.scheduled | date: 'dd.MM.yyyy' }}</p>
+        <p class="card-text"><b>End: </b> {{ season.scheduled_end | date: 'dd.MM.yyyy' }}</p>
+        <a class="btn btn-primary" routerLink="{{ season.id }}">Details</a>
+      </div>
+    </div>
+  </div>
+</div>

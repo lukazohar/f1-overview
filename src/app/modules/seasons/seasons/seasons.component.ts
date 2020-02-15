@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ISeason } from 'src/app/models';
+import { SeasonsService } from '../services/seasons.service';
 
 @Component({
   selector: 'app-seasons',
@@ -6,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./seasons.component.scss']
 })
 export class SeasonsComponent implements OnInit {
-  constructor() {}
+  seasons: Array<ISeason>;
+  constructor(private seasonsService: SeasonsService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.seasonsService.getSeasons().subscribe((seasons: Array<ISeason>) => (this.seasons = seasons));
+  }
 }

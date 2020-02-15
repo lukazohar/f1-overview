@@ -1,8 +1,8 @@
-import { Season } from '.';
+import { ISeason } from '.';
 
 export interface ISportsRadarResponse {
   generated_at: string;
   schema: string;
-  stages?: Array<Season>;
-  stage?: Season;
+  stages?: Array<ISeason>;
+  stage?: ISeason;
 }
