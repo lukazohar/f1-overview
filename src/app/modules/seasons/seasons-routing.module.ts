@@ -6,13 +6,11 @@ import { SeasonComponent } from './season/season.component';
 const routes: Routes = [
   {
     path: '',
-    component: SeasonsComponent,
-    children: [
-      {
-        path: '',
-        children: [{ path: ':season', component: SeasonComponent }]
-      }
-    ]
+    component: SeasonsComponent
+  },
+  {
+    path: ':season',
+    component: SeasonComponent
   }
 ];
 

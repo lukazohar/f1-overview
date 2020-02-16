@@ -1,1 +1,81 @@
-<p>season works!</p>
+<div class="row">
+  <h1 class="h1" style="font-size: 50px">{{ season.description }}</h1>
+</div>
+<div class="row">
+  <p class="h4">Start:</p>
+  <p style="font-size: 20px;">{{ season.scheduled | date: 'dd.MM.yyyy' }}</p>
+</div>
+<div class="row">
+  <p class="h4">End:</p>
+  <p style="font-size: 20px;">{{ season.scheduled_end | date: 'dd.MM.yyyy' }}</p>
+</div>
+<div class="row">
+  <h1 class="h2" style="font-size: 40px">Winner</h1>
+</div>
+<div class="row">
+  <div class="col-lg-6 col-12 p-1">
+    <div class="card mb-3" style="max-width: 540px; background-color: lightgray;">
+      <div class="row no-gutters p-1">
+        <div class="col-md-4">
+          <img src="assets/drivers/{{ season.winner.id.split(':')[2] }}.png" class="card-img" alt="Image not found" />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-2">
+                <img
+                  src="assets/country_flags/svg/{{ season.winner.country_code }}.svg"
+                  class="card-img float-left"
+                  height="30px"
+                  alt="Image not found"
+                />
+              </div>
+              <div class="col-10">
+                <h5 class="card-title ">
+                  {{ season.winner.name }}
+                </h5>
+              </div>
+            </div>
+            <div class="card-text mt-2">
+              <a class="btn btn-info" routerLink="{{ season.winner.id }}">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <h2 class="h2" style="font-size: 45px;">Teams</h2>
+</div>
+<div class="row">
+  <div class="col-lg-6 col-12 p-1" *ngFor="let team of season.teams">
+    <div class="card" style="background-color: lightgray;">
+      <div class="row no-gutters p-1">
+        <div class="col-md-4">
+          <img src="assets/teams/{{ team.id.split(':')[2] }}.png" class="card-img" alt="Image not found" />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-2">
+                <img
+                  src="assets/country_flags/svg/{{ team.country_code }}.svg"
+                  class="card-img"
+                  height="30px"
+                  alt="Image not found"
+                />
+              </div>
+              <div class="col-10">
+                <h5 class="card-title">{{ team.name }}</h5>
+              </div>
+            </div>
+            <div class="card-text mt-2">
+              <a class="btn btn-info" routerLink="{{ team.id }}">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
