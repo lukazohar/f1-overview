@@ -3,10 +3,9 @@ export interface ISeason {
   description: string;
   scheduled: Date;
   scheduled_end: Date;
-  type: string;
-  single_event: false;
+  type?: string;
+  single_event?: false;
   parents?: any;
-  stages?: any;
-  competitors?: any;
-  teams?: any;
+  winner?: any;
+  teams?: Array<any>;
 }
