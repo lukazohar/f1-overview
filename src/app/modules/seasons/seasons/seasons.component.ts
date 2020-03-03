@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ISeason } from 'src/app/models';
+import { IStage } from 'src/app/models';
 import { SeasonsService } from '../services/seasons.service';
 
 @Component({
@@ -8,10 +8,10 @@ import { SeasonsService } from '../services/seasons.service';
   styleUrls: ['./seasons.component.scss']
 })
 export class SeasonsComponent implements OnInit {
-  seasons: Array<ISeason>;
+  seasons: Array<IStage>;
   constructor(private seasonsService: SeasonsService) {}
 
   ngOnInit() {
-    this.seasonsService.getSeasons().subscribe((seasons: Array<ISeason>) => (this.seasons = seasons));
+    this.seasonsService.getSeasons().subscribe((seasons: Array<IStage>) => (this.seasons = seasons));
   }
 }
