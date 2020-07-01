@@ -15,4 +15,5 @@ export interface IStage {
   stages?: Array<IStage>;
   competitors?: Array<ICompetitor>;
   teams?: Array<ITeam>;
+  winner?: ICompetitor;
 }
